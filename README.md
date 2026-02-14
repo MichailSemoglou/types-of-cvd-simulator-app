@@ -1,5 +1,7 @@
 # CVD Simulator
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18639546.svg)](https://doi.org/10.5281/zenodo.18639546)
+
 A comprehensive Python package for simulating color vision deficiencies (CVD), including protanopia, deuteranopia, and tritanopia. This tool uses scientifically-validated algorithms to simulate how images appear to individuals with different types of color blindness.
 
 ## Features
@@ -288,7 +290,7 @@ If you use CVD Simulator in your research, please cite:
   year = {2026},
   version = {1.1.1},
   url = {https://github.com/MichailSemoglou/types-of-cvd-simulator-app},
-  doi = {10.5281/zenodo.XXXXXX}
+  doi = {10.5281/zenodo.18639546}
 }
 ```
 

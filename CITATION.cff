@@ -32,13 +32,10 @@ keywords:
   - human-computer interaction
   - inclusive design
   - Python
-# identifiers:
-#   - type: doi
-#     value: "10.5281/zenodo.XXXXXXX"
-#     description: "The concept DOI for the software (all versions)"
-#   - type: doi
-#     value: "10.5281/zenodo.XXXXXX1"
-#     description: "The versioned DOI for version 1.1.1"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.18639546"
+    description: "The DOI for version 1.1.1"
 preferred-citation:
   type: software
   title: "CVD Simulator: A Scientifically-Validated Tool for Color Vision Deficiency Simulation"

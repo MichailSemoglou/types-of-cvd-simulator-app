@@ -30,7 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Known Issues
 
-- Zenodo DOIs are placeholders (`10.5281/zenodo.XXXXXXX`) — they will be minted automatically after the first GitHub release with the Zenodo integration enabled.
+- Zenodo DOI: [10.5281/zenodo.18639546](https://doi.org/10.5281/zenodo.18639546)
 - Video processing requires a system-installed FFmpeg binary; it is not bundled with the package.
 
 ---
