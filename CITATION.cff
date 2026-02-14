@@ -1,0 +1,99 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+title: "CVD Simulator: A Scientifically-Validated Tool for Color Vision Deficiency Simulation"
+abstract: >-
+  A comprehensive Python package for simulating color vision deficiencies (CVD)
+  including protanopia, deuteranopia, tritanopia, and achromatopsia. CVD Simulator
+  unifies multiple peer-reviewed algorithms (Brettel 1997, Viénot 1999, Machado 2009)
+  with configurable severity levels, batch processing capabilities, and production-ready
+  features including security validation, comprehensive testing, and type safety.
+authors:
+  - family-names: "Semoglou"
+    given-names: "Michail"
+    orcid: "https://orcid.org/0009-0003-3268-5657"
+    affiliation: "College of Design and Innovation, Tongji University"
+repository-code: "https://github.com/MichailSemoglou/types-of-cvd-simulator-app"
+url: "https://github.com/MichailSemoglou/types-of-cvd-simulator-app"
+license: MIT
+version: "1.1.1"
+date-released: "2026-02-13"
+keywords:
+  - color vision deficiency
+  - color blindness
+  - accessibility
+  - image processing
+  - daltonization
+  - protanopia
+  - deuteranopia
+  - tritanopia
+  - achromatopsia
+  - scientific computing
+  - human-computer interaction
+  - inclusive design
+  - Python
+# Uncomment and fill in once your Zenodo DOIs are minted:
+# identifiers:
+#   - type: doi
+#     value: "10.5281/zenodo.XXXXXXX"
+#     description: "The concept DOI for the software (all versions)"
+#   - type: doi
+#     value: "10.5281/zenodo.XXXXXX1"
+#     description: "The versioned DOI for version 1.1.1"
+preferred-citation:
+  type: software
+  title: "CVD Simulator: A Scientifically-Validated Tool for Color Vision Deficiency Simulation"
+  authors:
+    - family-names: "Semoglou"
+      given-names: "Michail"
+      orcid: "https://orcid.org/0009-0003-3268-5657"
+      affiliation: "College of Design and Innovation, Tongji University"
+  year: 2026
+  url: "https://github.com/MichailSemoglou/types-of-cvd-simulator-app"
+  version: "1.1.1"
+references:
+  - type: article
+    authors:
+      - family-names: "Brettel"
+        given-names: "Hans"
+      - family-names: "Viénot"
+        given-names: "Françoise"
+      - family-names: "Mollon"
+        given-names: "John D."
+    title: "Computerized simulation of color appearance for dichromats"
+    year: 1997
+    journal: "Journal of the Optical Society of America A"
+    volume: 14
+    issue: 10
+    pages: "2647-2655"
+    doi: 10.1364/JOSAA.14.002647
+  - type: article
+    authors:
+      - family-names: "Viénot"
+        given-names: "Françoise"
+      - family-names: "Brettel"
+        given-names: "Hans"
+      - family-names: "Mollon"
+        given-names: "John D."
+    title: "Digital video colourmaps for checking the legibility of displays by dichromats"
+    year: 1999
+    journal: "Color Research & Application"
+    volume: 24
+    issue: 4
+    pages: "243-252"
+    doi: 10.1002/(SICI)1520-6378(199908)24:4<243::AID-COL5>3.0.CO;2-3
+  - type: article
+    authors:
+      - family-names: "Machado"
+        given-names: "Gustavo M."
+      - family-names: "Oliveira"
+        given-names: "Manuel M."
+      - family-names: "Fernandes"
+        given-names: "Leandro A. F."
+    title: "A physiologically-based model for simulation of color vision deficiency"
+    year: 2009
+    journal: "IEEE Transactions on Visualization and Computer Graphics"
+    volume: 15
+    issue: 6
+    pages: "1291-1298"
+    doi: 10.1109/TVCG.2009.113

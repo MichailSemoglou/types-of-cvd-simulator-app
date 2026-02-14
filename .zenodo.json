@@ -1,0 +1,43 @@
+{
+  "title": "CVD Simulator: A Scientifically-Validated Tool for Color Vision Deficiency Simulation",
+  "description": "A comprehensive Python package for simulating color vision deficiencies (CVD) including protanopia, deuteranopia, tritanopia, and achromatopsia. Unifies multiple peer-reviewed algorithms (Brettel 1997, Viénot 1999, Machado 2009) with configurable severity levels, batch processing, and production-ready features.",
+  "creators": [
+    {
+      "name": "Semoglou, Michail",
+      "orcid": "0009-0003-3268-5657",
+      "affiliation": "College of Design and Innovation, Tongji University"
+    }
+  ],
+  "version": "1.1.1",
+  "license": {
+    "id": "MIT"
+  },
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "color vision deficiency",
+    "color blindness",
+    "accessibility",
+    "image processing",
+    "daltonization",
+    "protanopia",
+    "deuteranopia",
+    "tritanopia",
+    "achromatopsia",
+    "scientific computing",
+    "Python"
+  ],
+  "related_identifiers": [
+    {
+      "scheme": "url",
+      "identifier": "https://github.com/MichailSemoglou/types-of-cvd-simulator-app",
+      "relation": "isSupplementTo"
+    },
+    {
+      "scheme": "url",
+      "identifier": "https://pypi.org/project/cvd-simulator/",
+      "relation": "isIdenticalTo"
+    }
+  ],
+  "notes": "Published via the Zenodo-GitHub integration. Each GitHub release automatically triggers a new Zenodo deposit."
+}

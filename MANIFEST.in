@@ -1,0 +1,17 @@
+# Root metadata files
+include LICENSE CITATION.cff CHANGELOG.md README.md
+include .zenodo.json
+include requirements.txt requirements-dev.txt
+
+# Documentation (Sphinx sources + assets)
+recursive-include docs *.rst *.py *.css
+include docs/Makefile
+
+# Examples
+recursive-include examples *.py
+
+# Tests (allows running tests from the sdist)
+recursive-include tests *.py
+
+# Prevent build artifacts from leaking into the sdist
+global-exclude *.pyc *.pyo *.pyd __pycache__ .DS_Store Thumbs.db

@@ -1,0 +1,53 @@
+/* Custom styles for CVD Simulator documentation */
+
+.wy-nav-content {
+  max-width: 1200px;
+}
+
+.wy-side-nav-search {
+  background-color: #2980b9;
+}
+
+.wy-nav-top {
+  background-color: #2980b9;
+}
+
+.wy-menu-vertical header,
+.wy-menu-vertical p.caption {
+  color: #2980b9;
+}
+
+.rst-content .section h1,
+.rst-content .section h2,
+.rst-content .section h3 {
+  color: #2c3e50;
+}
+
+.rst-content code.literal {
+  color: #2980b9;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 3px;
+  padding: 2px 5px;
+}
+
+.rst-content pre {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+}
+
+.rst-content .note {
+  background-color: #e8f4f8;
+  border-left: 4px solid #2980b9;
+}
+
+.rst-content .warning {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+}
+
+.rst-content .tip {
+  background-color: #d4edda;
+  border-left: 4px solid #28a745;
+}

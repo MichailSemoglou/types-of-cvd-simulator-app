@@ -1,0 +1,64 @@
+version: "3.8"
+
+services:
+  cvd-simulator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cvd-simulator:latest
+    container_name: cvd-simulator
+    volumes:
+      - ./inputs:/inputs:ro
+      - ./outputs:/outputs
+    environment:
+      - CVD_SIMULATOR_OUTPUT_DIRECTORY=/outputs
+      - CVD_SIMULATOR_ALGORITHM=MACHADO_2009
+      - CVD_SIMULATOR_SEVERITY=0.8
+      - CVD_SIMULATOR_OUTPUT_FORMAT=PNG
+    command: ["/inputs/image.jpg"]
+
+  # Development service with hot-reload
+  cvd-simulator-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cvd-simulator:dev
+    container_name: cvd-simulator-dev
+    volumes:
+      - ./src:/app/src:ro
+      - ./inputs:/inputs:ro
+      - ./outputs:/outputs
+    environment:
+      - CVD_SIMULATOR_OUTPUT_DIRECTORY=/outputs
+      - PYTHONPATH=/app/src
+    command: ["--version"]
+
+  # Testing service
+  cvd-simulator-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cvd-simulator:test
+    container_name: cvd-simulator-test
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: >
+      bash -c "pip install -r requirements-dev.txt &&
+               pytest tests/unit -v --tb=short"
+
+  # Documentation service
+  docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cvd-simulator:docs
+    container_name: cvd-simulator-docs
+    volumes:
+      - ./docs:/app/docs
+      - ./docs/_build:/app/docs/_build
+    working_dir: /app
+    command: >
+      bash -c "pip install sphinx sphinx-rtd-theme sphinx-autodoc-typehints &&
+               cd docs &&
+               make html"
