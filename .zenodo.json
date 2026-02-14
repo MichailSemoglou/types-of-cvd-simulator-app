@@ -25,6 +25,8 @@
     "tritanopia",
     "achromatopsia",
     "scientific computing",
+    "human-computer interaction",
+    "inclusive design",
     "Python"
   ],
   "related_identifiers": [
@@ -37,6 +39,21 @@
       "scheme": "url",
       "identifier": "https://pypi.org/project/cvd-simulator/",
       "relation": "isIdenticalTo"
+    },
+    {
+      "scheme": "doi",
+      "identifier": "10.1364/JOSAA.14.002647",
+      "relation": "references"
+    },
+    {
+      "scheme": "doi",
+      "identifier": "10.1002/(SICI)1520-6378(199908)24:4<243::AID-COL5>3.0.CO;2-3",
+      "relation": "references"
+    },
+    {
+      "scheme": "doi",
+      "identifier": "10.1109/TVCG.2009.113",
+      "relation": "references"
     }
   ],
   "notes": "Published via the Zenodo-GitHub integration. Each GitHub release automatically triggers a new Zenodo deposit."
