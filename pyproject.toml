@@ -18,17 +18,16 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Topic :: Multimedia :: Graphics",
     "Topic :: Scientific/Engineering :: Image Processing",
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "daltonlens==0.1.5",
     "Pillow==12.1.1",
-    "numpy==2.4.2",
+    "numpy>=2.0.0",
     "tqdm>=4.66.0",
     "rich>=13.0.0",
 ]
