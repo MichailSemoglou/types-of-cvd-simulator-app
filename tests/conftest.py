@@ -22,14 +22,14 @@ def temp_output_dir(tmp_path: Path) -> Path:
 @pytest.fixture
 def sample_image() -> Image.Image:
     """Create a sample RGB image for testing."""
-    return Image.new('RGB', (100, 100), color=(255, 128, 64))
+    return Image.new("RGB", (100, 100), color=(255, 128, 64))
 
 
 @pytest.fixture
 def sample_image_path(tmp_path: Path) -> Path:
     """Create a sample image file for testing."""
     image_path = tmp_path / "test_image.png"
-    image = Image.new('RGB', (100, 100), color=(255, 128, 64))
+    image = Image.new("RGB", (100, 100), color=(255, 128, 64))
     image.save(image_path)
     return image_path
 
@@ -39,12 +39,12 @@ def sample_images_dir(tmp_path: Path) -> Path:
     """Create a directory with multiple sample images."""
     img_dir = tmp_path / "images"
     img_dir.mkdir()
-    
+
     # Create a few test images
     for i, color in enumerate([(255, 0, 0), (0, 255, 0), (0, 0, 255)]):
-        img = Image.new('RGB', (100, 100), color=color)
+        img = Image.new("RGB", (100, 100), color=color)
         img.save(img_dir / f"test_{i}.png")
-    
+
     return img_dir
 
 

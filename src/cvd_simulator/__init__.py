@@ -24,6 +24,7 @@ from cvd_simulator.exceptions import (
 # Optional Pydantic config export
 try:
     from cvd_simulator.config import SimulationConfigPydantic
+
     _has_pydantic = True
 except ImportError:
     _has_pydantic = False
@@ -31,24 +32,28 @@ except ImportError:
 # v1.1.1 new exports
 try:
     from cvd_simulator.presets import PresetType, Preset, get_preset, apply_preset
+
     _has_presets = True
 except ImportError:
     _has_presets = False
 
 try:
     from cvd_simulator.utils.metadata import SimulationMetadata, create_metadata, export_metadata
+
     _has_metadata = True
 except ImportError:
     _has_metadata = False
 
 try:
     from cvd_simulator.utils.profiling import PerformanceProfiler, Timer
+
     _has_profiling = True
 except ImportError:
     _has_profiling = False
 
 try:
     from cvd_simulator.core.video_processor import VideoProcessor, VideoMetadata
+
     _has_video = True
 except ImportError:
     _has_video = False
