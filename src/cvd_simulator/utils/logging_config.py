@@ -103,6 +103,7 @@ def setup_logging(
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setLevel(level.value)
 
+    console_formatter: logging.Formatter
     if use_colors and sys.stdout.isatty():
         console_formatter = ColoredFormatter(log_format)
     else:

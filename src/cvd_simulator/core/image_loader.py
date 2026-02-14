@@ -83,7 +83,7 @@ class ImageLoader:
             # Convert to RGB if necessary
             if image.mode != "RGB":
                 logger.debug(f"Converting from {image.mode} to RGB")
-                image = image.convert("RGB")
+                image = image.convert("RGB")  # type: ignore[assignment]
 
             logger.info(f"Image loaded successfully: {image.size}")
             return image
@@ -170,7 +170,7 @@ class ImageLoader:
             >>> print(meta["size"])
             (1920, 1080)
         """
-        metadata = {
+        metadata: dict[str, Any] = {
             "size": image.size,
             "mode": image.mode,
             "format": image.format,

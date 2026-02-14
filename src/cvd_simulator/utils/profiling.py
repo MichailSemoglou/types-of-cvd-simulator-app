@@ -9,9 +9,10 @@ from __future__ import annotations
 import functools
 import time
 from collections import defaultdict
+from collections.abc import Generator
 from contextlib import contextmanager
 from dataclasses import dataclass, field
-from typing import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING, Any, Callable
 
 from cvd_simulator.utils.logging_config import get_logger
 
@@ -81,13 +82,13 @@ class PerformanceProfiler:
         >>> print(profiler.get_summary())
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize the profiler."""
         self._timings: dict[str, TimingReport] = {}
         self._enabled = True
 
     @contextmanager
-    def time_operation(self, operation_name: str):
+    def time_operation(self, operation_name: str) -> Generator[None, None, None]:
         """Context manager to time an operation.
 
         Args:
@@ -186,7 +187,7 @@ class PerformanceProfiler:
         """Enable profiling."""
         self._enabled = True
 
-    def to_dict(self) -> dict:
+    def to_dict(self) -> dict[str, Any]:
         """Convert all reports to dictionary."""
         return {name: report.to_dict() for name, report in self._timings.items()}
 
@@ -195,7 +196,7 @@ class PerformanceProfiler:
 _global_profiler = PerformanceProfiler()
 
 
-def time_operation(operation_name: str):
+def time_operation(operation_name: str) -> Callable[..., Any]:
     """Decorator to time a function.
 
     Args:
@@ -212,7 +213,7 @@ def time_operation(operation_name: str):
 
     def decorator(func: Callable) -> Callable:
         @functools.wraps(func)
-        def wrapper(*args, **kwargs):
+        def wrapper(*args: Any, **kwargs: Any) -> Any:
             with _global_profiler.time_operation(operation_name):
                 return func(*args, **kwargs)
 
@@ -222,7 +223,7 @@ def time_operation(operation_name: str):
 
 
 @contextmanager
-def timed(operation_name: str):
+def timed(operation_name: str) -> Generator[None, None, None]:
     """Context manager for timing using the global profiler.
 
     Args:
@@ -256,6 +257,7 @@ def print_summary() -> None:
 def reset_global_profiler() -> None:
     """Reset the global profiler."""
     _global_profiler.reset()
+    _global_profiler.enable()
 
 
 class Timer:
@@ -269,7 +271,7 @@ class Timer:
         >>> print(f"Took {elapsed:.2f} ms")
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize the timer."""
         self._start_time: float | None = None
         self._elapsed_ms: float = 0.0
@@ -303,7 +305,7 @@ class Timer:
         self.start()
         return self
 
-    def __exit__(self, *args) -> None:
+    def __exit__(self, *args: Any) -> None:
         """Context manager exit."""
         self.stop()
 

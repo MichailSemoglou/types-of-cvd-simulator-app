@@ -331,7 +331,7 @@ if PYDANTIC_AVAILABLE:
             """Convert string paths to Path objects."""
             if isinstance(v, str):
                 return Path(v)
-            return v
+            return v  # type: ignore[no-any-return]
 
         def to_simulation_config(self) -> SimulationConfig:
             """Convert to standard SimulationConfig.

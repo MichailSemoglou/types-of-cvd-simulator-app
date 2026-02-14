@@ -246,13 +246,13 @@ def verify_reproducibility(
         Dictionary with verification results.
     """
     metadata = load_metadata(metadata_path)
-    results = {
+    results: dict[str, Any] = {
         "metadata_valid": True,
         "input_file_exists": False,
         "checksum_match": False,
         "software_version_match": False,
-        "warnings": [],
-        "errors": [],
+        "warnings": list[str](),
+        "errors": list[str](),
     }
 
     # Check input file

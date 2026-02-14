@@ -134,7 +134,7 @@ class OutputWriter:
         """
         fmt = self.config.output_format
 
-        settings = {
+        settings: dict[str, Any] = {
             "format": fmt.pil_format,
         }
 
@@ -204,7 +204,7 @@ class OutputWriter:
             pil_format = format_mapping.get(ext, "JPEG")
 
             # Build settings
-            settings = {"format": pil_format}
+            settings: dict[str, Any] = {"format": pil_format}
 
             if pil_format == "JPEG":
                 settings.update(

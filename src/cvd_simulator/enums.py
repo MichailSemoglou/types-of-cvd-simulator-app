@@ -84,7 +84,7 @@ class Algorithm(Enum):
         """
         from daltonlens import simulate
 
-        mapping = {
+        mapping: dict["Algorithm", type] = {
             Algorithm.BRETTEL_1997: simulate.Simulator_Brettel1997,
             Algorithm.VIENOT_1999: simulate.Simulator_Vienot1999,
             Algorithm.MACHADO_2009: simulate.Simulator_Machado2009,

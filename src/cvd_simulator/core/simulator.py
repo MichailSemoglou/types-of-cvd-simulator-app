@@ -9,7 +9,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 from datetime import datetime
 from multiprocessing import cpu_count
 from pathlib import Path
-from typing import Callable
+from typing import Any, Callable
 
 import numpy as np
 from PIL import Image
@@ -366,8 +366,10 @@ class AsyncCVDSimulator(CVDSimulator):
 
         if cvd_type:
             # Process single type for all images
-            args_list = [(str(path), cvd_type.name, config_dict) for path in image_paths]
-            process_func = _process_single_image_with_type
+            args_list: list[tuple[Any, ...]] = [
+                (str(path), cvd_type.name, config_dict) for path in image_paths
+            ]
+            process_func: Callable[..., Any] = _process_single_image_with_type
         else:
             # Process all types for all images
             args_list = [(str(path), config_dict) for path in image_paths]
